@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.search{
+    width: 90%;
+    height: 4rem;
+    margin: 0.5rem auto 1rem;
+
+    border: 1px solid rgb(199,199,199);
+}
+input{
+    width: 70%;
+    height: 2.5rem;
+    padding-left: 2rem;
+    padding-top: 0.8rem;
+    border: none;
+}
+input::placeholder{
+    font-size: 1.3rem;
+    line-height: 3rem;
+}
+.search .sou{
+    width: 2rem;
+    padding-left: 1rem;
+    position: absolute;
+    top: 1.5rem;
+}
+.list{
+    width: 100%;
+    height: 4rem;
+    border-bottom: 2px solid rgb(199,199,199);;
+}
+.list ul{
+    width: 95%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.list ul li{
+    background: url(../img/page3/下箭头.png) no-repeat 5.4rem 1.2rem;
+    background-size: 1rem 1rem;
+    padding:1rem 1.5rem;
+}
+.list ul li a{
+    color: rgb(102,102,102);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+content{
+    width: 100%;
+}
+content ul{
+    width: 90%;
+    margin: 0 auto;
+}
+content ul li{
+    display: flex;
+    border-bottom: 0.1rem solid #ff8a00;
+    padding: 2em 1.3rem;
+}
+content ul li img{
+    width: 33%;
+}
+content ul li p{
+    padding-left: 1.5rem;
+    line-height: 2.5rem;
+}
+content ul li p .gry{
+    color: rgb(167, 171, 177);
+}
+content ul li .title{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+content ul li .price{
+    color: #ff8a00;
+    font-weight: 600;
+}
+
+.footer-box{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    color: rgb(147,148,147);
+    background-color: rgb(47,49,48);
+}
+.wuyou{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align: left;
+    color: rgb(147,148,147);
+    font-size: 1.4rem;
+    border-bottom: 1px solid rgb(147,148,147);
+}
+.cu{
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.duan{
+    width: 100%;
+    height: 8rem;
+    color: rgb(147,148,147);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.apple{
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+}
