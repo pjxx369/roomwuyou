@@ -1,0 +1,19 @@
+.banxin{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.mulu{
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.mulu .shouye{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.mulu a{
+    font-size: 1.4rem;
+    color: black;
+}
