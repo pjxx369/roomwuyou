@@ -3,11 +3,13 @@
     margin: 0 auto;
 }
 
+
 .mulu{
     height: 5rem;
     width: 100%;
     display: flex;
     align-items: center;
+    background: white;
 }
 .mulu .shouye{
     font-size: 1.5rem;
@@ -17,3 +19,76 @@
     font-size: 1.4rem;
     color: black;
 }
+.bg{
+    background: url(../img/my/bg1.png) no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 17rem;
+}
+
+.touxiang{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+.touxiang img{
+    width: 8rem;
+    height: 8rem;
+}
+.touxiang a{
+    width: 6rem;
+    height: 3rem;
+    display: flex;
+    border: 1px solid white;
+    color: white;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.content{
+    background: white;
+    width: 100%;
+}
+.content p{
+    height: 3rem;
+    padding: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(197,197,197);
+}
+.content p img{
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.content p a{
+    color:black;
+    font-size: 1.2rem;
+}
+
+footer{
+    padding-top: 3rem;
+    width: 100%;
+    margin: 0 auto;
+    background: rgb(245,245,245);
+    text-align: center;
+}
+footer button{
+    color: #ff8a00;
+    background: white;
+    border: 1px solid #ccc;
+    width: 90%;
+    height: 3rem;
+    margin: 0 auto;
+}
+body{
+    background: rgb(245,245,245);
+}
+.box{
+    background: white;
+}
+

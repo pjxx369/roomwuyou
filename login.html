@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <script src=""></script>
+</head>
+
+<body>
+
+    <div class="box">
+        <header>
+            <div class="header-box">
+                <div class="header-box-left">
+                    <a href="#">
+                        <img src="./img/shouye/logo.jpg" alt="">
+                    </a>
+                </div>
+                <div class="header-box-right">
+                    <div class="my">
+                        <a href="#">
+                            <img src="./img/shouye/my.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="down">
+                        <a href="#">
+                            <img src="./img/shouye/xiazai.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <div class="mulu">
+            <div class="banxin">
+                <p><a class="shouye" href="index.html">首页</a> > <a href="my.html">我的</a> > <a href="login.html">登录</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="loginfangshi">
+            <p id="putong">普通登录</p>
+            <p id="kuaijie">验证码快捷登录</p>
+        </div>
+
+        <form action="my.html">
+            <ul class="yanzheng">
+                <div class="banxin">
+                    <li>
+                        <input type="text" name="" id="phone" pattern="^1[34578][0-9]{9}$" required="required" placeholder="请输入手机号">
+                    </li>
+                    <li>
+                        <input type="password" name="" id="pwd" placeholder="请输入密码">
+                    </li>
+                </div>
+            </ul>
+
+            <ul class="yanzhengma">
+                <div class="banxin">
+                    <li>
+                        <input type="text" id="phone" pattern="^1[34578][0-9]{9}$" required="required" placeholder="请输入手机号">
+                        <span id="ma">发送验证码</span>
+                    </li>
+                    <li>
+                        <input type="password" name="" id="ma" pattern="^\d{4}$" required="required" placeholder="请输入短信中的验证码">
+                    </li>
+                </div>
+            </ul>
+            <div class="hui">
+                <button class="denglu" href="my.html">立即登录</button>
+            </div>
+        </form>
+
+
+
+    </div>
+    <footer>
+        <a href="reg.html">立即注册</a>
+        <a href="forget.html">忘记密码</a>
+    </footer>
+
+</body>
+
+</html>
+
+<script>
+    var putong = document.getElementById('putong');
+    var kuaijie = document.getElementById('kuaijie');
+    var phone = document.getElementById('phone');
+    var pwd = document.getElementById('pwd');
+    var yanzheng = document.getElementsByClassName('yanzheng')[0];
+    var yanzhengma = document.getElementsByClassName('yanzhengma')[0];
+    var ma=document.getElementById('ma');
+
+    putong.onclick = function () {
+        putong.style.borderBottom = '5px solid #ff8a00';
+        kuaijie.style.borderBottom = '5px solid rgb(203,203,203)'
+        yanzheng.style.display = 'block';
+        yanzhengma.style.display = 'none';
+
+
+
+
+    }
+
+
+    kuaijie.onclick = function () {
+        kuaijie.style.borderBottom = '5px solid #ff8a00';
+        putong.style.borderBottom = '5px solid rgb(203,203,203)';
+        yanzhengma.style.display = 'block';
+        yanzheng.style.display = 'none';
+    }
+    var time = 60;
+    var timer;
+    ma.onclick = function(){
+        clearInterval(timer);
+        timer = setInterval(function(){
+
+            if(time==0){
+                ma.innerHTML='获取验证码';
+                time=60;
+            }else{
+                time--;
+                ma.innerHTML=time+'秒后重新发送'
+            }
+        },1000)
+    }
+
+</script>
