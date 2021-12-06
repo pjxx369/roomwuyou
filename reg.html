@@ -34,9 +34,52 @@
         </div>
     </header>
 
-    
+    <div class="mulu">
+        <div class="banxin">
+            <p>
+                <a class="shouye" href="index.html">首页</a> > <a href="my.html">我的</a> > <a href="reg.html">注册</a>
+            </p>
+        </div>
+    </div>
 
+    <form action="login.html">
+            <ul class="yanzheng">
+                <li>
+                    <input type="text" name="" id="phone" pattern="^1[34578][0-9]{9}$" required placeholder="请输入手机号">
+                    <span id="ma">发送验证码</span>
+                </li>
+                <li>
+                    <input type="text" pattern="^\d{4}$" required placeholder="请输入短信中的验证码">
+                </li>
+                <li>
+                    <input type="password" placeholder="请输入新密码">
+                </li>
+            </ul>
+        <button type="submit">立即注册</button>
+    </form>
 
 </body>
 
 </html>
+
+<script>
+    var ma=document.getElementById('ma');
+    var time = 60;
+    var timer;
+    ma.onclick = function(){
+        clearInterval(timer);
+        timer = setInterval(function(){
+
+            if(time==0){
+                ma.innerHTML='获取验证码';
+                time=60;
+            }else{
+                time--;
+                ma.innerHTML=time+'秒后重新发送'
+            }
+        },1000)
+    }
+
+
+
+</script>
