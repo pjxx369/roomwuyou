@@ -42,14 +42,14 @@
         </div>
     </div>
 
-    <form action="login.html" onsubmit="check(this)">
+    <form action="login.html" onsubmit="return check()">
         <ul class="yanzheng">
             <li>
                 <input type="text" name="" id="phone" pattern="^1[34578][0-9]{9}$" required placeholder="请输入手机号">
                 <span id="ma">发送验证码</span>
             </li>
             <li>
-                <input type="text" pattern="^\d{4}$" required placeholder="请输入短信中的验证码">
+                <input type="text" pattern="^\d{4}$" id="yzm" required placeholder="请输入短信中的验证码">
             </li>
             <li>
                 <input id="pwd1" type="password" placeholder="请输入新密码">
@@ -70,11 +70,28 @@
 <script>
     var ma = document.getElementById('ma');
     var time = 60;
+    var shijian=3;
     var timer;
+    var str;
+    var time1;
+    const sj1 = Math.floor(Math.random() * 10)
+    const sj2 = Math.floor(Math.random() * 10)
+    const sj3 = Math.floor(Math.random() * 10)
+    const sj4 = Math.floor(Math.random() * 10)
+    str = sj1 + '' + sj2 + '' + sj3 + '' + sj4;
     ma.onclick = function () {
         clearInterval(timer);
+        clearInterval(time1)
+        time1 = setInterval(function(){
+            if(shijian==0){
+                alert(str);
+                clearInterval(time1)
+                shijian = 3;
+            }else{
+                shijian--;
+            }
+        },1000)
         timer = setInterval(function () {
-
             if (time == 0) {
                 ma.innerHTML = '获取验证码';
                 time = 60;
@@ -87,13 +104,18 @@
 
 
 
-    function check(aaa) {
+    function check() {
         var p1 = document.getElementById('pwd1').value;
         var p2 = document.getElementById('pwd2').value;
-        if(p1!=p2){
+
+        if (yzm.value != str) {
+            alert('验证码有误')
+            return false;
+        } else if (p1 != p2) {
+            alert('请输入相同密码')
             return false;
         }else{
-            return true;
+            return true
         }
     }
 
