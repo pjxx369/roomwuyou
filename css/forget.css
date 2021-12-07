@@ -42,16 +42,24 @@
 }
 
 .yanzheng li input:nth-of-type(1){
-    width: 70%;
+    width: 60%;
+}
+.yanzheng .panduan{
+    width: 20%;
+    border: none;
 }
 .yanzheng span{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30%;
+    width: 20%;
     border: 1px solid rgb(203,203,203);
     height: 2rem;
 }
+
+/* .yanzhengma{
+    display: flex;
+} */
 
 button{
     display: block;
