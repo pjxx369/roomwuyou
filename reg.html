@@ -45,11 +45,11 @@
     <form action="login.html" onsubmit="return fn()">
             <ul class="yanzheng">
                 <li>
-                    <input type="text" name="" id="phone" pattern="^1[34578][0-9]{9}$" required placeholder="请输入手机号">
-                    <span id="ma">发送验证码</span>
+                    <input type="text" name="" id="phone" required placeholder="请输入手机号"> <span class="panduan"></span>
+                <span id="ma">发送验证码</span>
                 </li>
                 <li>
-                    <input type="text"  id="yanzheng" required placeholder="请输入短信中的验证码">
+                    <input type="text"  id="yzm" required placeholder="请输入短信中的验证码">
                 </li>
                 <li>
                     <input type="password" pattern="^\w{6}+$" required placeholder="请输入新密码">
@@ -103,14 +103,33 @@
         },1000)
 
     }
-    function fn(){
-        if(yanzheng.value!=str){
-            alert('验证码输入有误')
-            return false
-        }else{
-            return true
+    var iphone =document.getElementById("phone");
+        // console.log(iphone);
+        var panduan_=document.getElementsByClassName("panduan")[0];
+        var reg=/^(0|86|17951)?(13[0-9]|15[012356789]|166|17[3678]|18[0-9]|14[57])[0-9]{8}$/;
+        iphone.onblur=function(){
+            if(reg.test(iphone.value)){
+                panduan_.innerHTML="点这里-->";
+            }
+            else{
+                panduan_.innerHTML="乖乖~输错啦！";
+            }
         }
-    }
+
+        var yzm_=document.getElementById("yzm");
+        yzm_.onblur=function(){
+            if (yzm.value != str) {
+            alert('验证码有误！');
+            }
+        }
+    // function fn(){
+    //     if(yanzheng.value!=str){
+    //         alert('验证码输入有误')
+    //         return false
+    //     }else{
+    //         return true
+    //     }
+    // }
 
 
 </script>
