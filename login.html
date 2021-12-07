@@ -53,28 +53,34 @@
             <ul class="yanzheng">
                 <div class="banxin">
                     <li>
-                        <input type="text" name="" id="phone" pattern="^1[34578][0-9]{9}$"  placeholder="请输入手机号">
+                        <input type="text" name="" id="phone" pattern="^1[34578][0-9]{9}$" placeholder="请输入手机号">
                     </li>
                     <li>
                         <input type="password" name="" id="pwd" placeholder="请输入密码">
                     </li>
                 </div>
+                <div class="hui">
+                    <button class="denglu" href="my.html">立即登录</button>
+                </div>
             </ul>
-
+        </form>
+        
+        <form action="my8.html" onsubmit="return fn()">
             <ul class="yanzhengma">
                 <div class="banxin">
                     <li>
-                        <input type="text" id="phone" pattern="^1[34578][0-9]{9}$"  placeholder="请输入手机号">
+                        <input type="text" id="phone" pattern="^1[34578][0-9]{9}$" placeholder="请输入手机号">
                         <span id="ma">发送验证码</span>
                     </li>
                     <li>
-                        <input type="password" name="" id="ma" pattern="^\d{4}$" placeholder="请输入短信中的验证码">
+                        <input type="text" name="" id="yzm"  placeholder="请输入短信中的验证码">
                     </li>
                 </div>
+                <div class="hui">
+                    <button class="denglu" href="my.html">立即登录</button>
+                </div>
             </ul>
-            <div class="hui">
-                <button class="denglu" href="my.html">立即登录</button>
-            </div>
+           
         </form>
 
 
@@ -96,17 +102,21 @@
     var pwd = document.getElementById('pwd');
     var yanzheng = document.getElementsByClassName('yanzheng')[0];
     var yanzhengma = document.getElementsByClassName('yanzhengma')[0];
-    var ma=document.getElementById('ma');
-
+    var ma = document.getElementById('ma');
+    var yzm = document.getElementById('yzm');
+    var str;
+    const sj1 = Math.floor(Math.random() * 10)
+    const sj2 = Math.floor(Math.random() * 10)
+    const sj3 = Math.floor(Math.random() * 10)
+    const sj4 = Math.floor(Math.random() * 10)
+    str = sj1 + '' + sj2 + '' + sj3 + '' + sj4;
+    var time1;
+    var shijian=3;
     putong.onclick = function () {
         putong.style.borderBottom = '5px solid #ff8a00';
         kuaijie.style.borderBottom = '5px solid rgb(203,203,203)'
         yanzheng.style.display = 'block';
         yanzhengma.style.display = 'none';
-
-
-
-
     }
 
 
@@ -118,18 +128,39 @@
     }
     var time = 60;
     var timer;
-    ma.onclick = function(){
-        clearInterval(timer);
-        timer = setInterval(function(){
+    ma.onclick = function () {
 
-            if(time==0){
-                ma.innerHTML='获取验证码';
-                time=60;
+        clearInterval(timer);
+        clearInterval(time1)
+        time1 = setInterval(function(){
+            if(shijian==0){
+                alert(str);
+                console.log(str);
+                clearInterval(time1)
+                shijian = 3;
             }else{
-                time--;
-                ma.innerHTML=time+'秒后重新发送'
+                shijian--;
             }
         },1000)
+        timer = setInterval(function () {
+
+            if (time == 0) {
+                ma.innerHTML = '获取验证码';
+                time = 60;
+            } else {
+                time--;
+                ma.innerHTML = time + '秒后重新发送'
+            }
+        }, 1000)
+    }
+
+    function fn(){
+        if(yzm.value!=str){
+            alert('验证码输入有误')
+            return false
+        }else{
+            return true
+        }
     }
 
 </script>
