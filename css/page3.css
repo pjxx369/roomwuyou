@@ -88,6 +88,11 @@ content ul li .price{
     font-weight: 600;
 }
 
+footer{
+    width: 100%;
+    background-color: rgb(47,49,48);
+}
+
 .footer-box{
     width: 90%;
     margin: 0 auto;

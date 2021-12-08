@@ -19,7 +19,7 @@
         <div class="list">
             <ul>
                 <li>
-                    <a id="quyu"  class="triangle">区域</a>
+                    <a id="quyu" class="triangle">区域</a>
                 </li>
                 <li>
                     <a id="jiage" class="triangle">价格</a>
@@ -144,36 +144,36 @@
     </div>
     <content>
         <ul>
-            <li> 
+            <li>
                 <img src="./img/page3/img1.png" alt="">
                 <p>
                     <span class="title">西便门外大街2室1厅89平</span> <br>
                     南北 高楼层/6层 <br>
-                    <span class="gry">签约价格:13244元/平</span>  <span class="price">1105万</span> <br>
+                    <span class="gry">签约价格:13244元/平</span> <span class="price">1105万</span> <br>
                     <span class="gry">签约日期:2015年11月10日</span>
                 </p>
             </li>
-            <li> 
-                <img src="./img/page3/img2.png" alt=""> 
+            <li>
+                <img src="./img/page3/img2.png" alt="">
                 <p>
                     <span class="title">金桥国际 1室1厅 63平</span> <br>
                     南北 高楼层/6层 <br>
-                    <span class="gry">签约价格:13244元/平</span>  <span class="price">905万</span> <br>
+                    <span class="gry">签约价格:13244元/平</span> <span class="price">905万</span> <br>
                     <span class="gry">签约日期:2015年11月10日</span>
                 </p>
             </li>
-            <li> 
-                <img src="./img/page3/img3.png" alt=""> 
+            <li>
+                <img src="./img/page3/img3.png" alt="">
                 <p>
                     <span class="title">花涧溪二期 2室2厅 90平</span> <br>
                     南北 高楼层/6层 <br>
-                    <span class="gry">签约价格:13244元/平</span>  <span class="price">1322万</span> <br>
+                    <span class="gry">签约价格:13244元/平</span> <span class="price">1322万</span> <br>
                     <span class="gry">签约日期:2015年11月10日</span>
                 </p>
             </li>
         </ul>
     </content>
-    
+
     <footer>
         <div class="footer-box">
             <div class="wuyou">
@@ -202,8 +202,8 @@
             <p>网络经营许可证京ICP备20160812号</p>
 
         </div>
-    </footer>          
-    
+    </footer>
+
     <div class="mb">
 
     </div>
@@ -223,21 +223,23 @@
     var fangxingbox = document.getElementsByClassName('fangxing-box')[0];
     var morebox = document.getElementsByClassName('more-box')[0];
     // var mengban=document.createElement("div");
-    var body_=document.getElementsByClassName("body")[0];
-        // mengban.className="mb";
-    var mb_=document.getElementsByClassName("mb")[0];
-    var triangle=document.getElementsByClassName("triangle")[0];
-    var triangle_=document.getElementsByClassName("triangle")[1];
-    var triangle2=document.getElementsByClassName("triangle")[2];
-    var triangle3=document.getElementsByClassName("triangle")[3];
+    var body_ = document.getElementsByClassName("body")[0];
+    // mengban.className="mb";
+    var mb_ = document.getElementsByClassName("mb")[0];
+    var triangle = document.getElementsByClassName("triangle")[0];
+    var triangle_ = document.getElementsByClassName("triangle")[1];
+    var triangle2 = document.getElementsByClassName("triangle")[2];
+    var triangle3 = document.getElementsByClassName("triangle")[3];
     // console.log(triangle);
     // console.log(mb_);
 
-    quyu.onclick = function(){
-         
-           mb_.style.display="block";
-           triangle.className='triangle1';
+    quyu.onclick = function () {
 
+        mb_.style.display = "block";
+        triangle.className = 'triangle1';
+        triangle_.className = 'triangle'
+        triangle2.className = 'triangle'
+        triangle3.className = 'triangle'
 
         quyu.style.color = '#ff8a00';
         jiage.style.color = 'black';
@@ -245,17 +247,20 @@
         gengduo.style.color = 'black';
         quyubox.style.display = 'block';
         jiagebox.style.display = 'none';
-        fangxingbox .style.display = 'none';
+        fangxingbox.style.display = 'none';
         morebox.style.display = 'none';
     }
-    
-   
 
-    jiage.onclick = function(){
 
-        
-        mb_.style.display="block";
-        triangle_.className='triangle1';
+
+    jiage.onclick = function () {
+
+
+        mb_.style.display = "block";
+        triangle.className = 'triangle';
+        triangle_.className = 'triangle1';
+        triangle2.className = 'triangle'
+        triangle3.className = 'triangle'
 
         quyu.style.color = 'black';
         jiage.style.color = '#ff8a00';
@@ -263,13 +268,16 @@
         gengduo.style.color = 'black';
         quyubox.style.display = 'none';
         jiagebox.style.display = 'block';
-        fangxingbox .style.display = 'none';
+        fangxingbox.style.display = 'none';
         morebox.style.display = 'none';
     }
-    fangxing.onclick = function(){
+    fangxing.onclick = function () {
 
-        mb_.style.display="block";
-        triangle2.className='triangle1';
+        mb_.style.display = "block";
+        triangle.className = 'triangle';
+        triangle_.className = 'triangle'
+        triangle2.className = 'triangle1';
+        triangle3.className = 'triangle'
 
 
         quyu.style.color = 'black';
@@ -278,13 +286,16 @@
         gengduo.style.color = 'black';
         quyubox.style.display = 'none';
         jiagebox.style.display = 'none';
-        fangxingbox .style.display = 'block';
+        fangxingbox.style.display = 'block';
         morebox.style.display = 'none';
     }
-    gengduo.onclick = function(){
+    gengduo.onclick = function () {
 
-        mb_.style.display="block";
-        triangle3.className='triangle1';
+        mb_.style.display = "block";
+        triangle.className = 'triangle';
+        triangle_.className = 'triangle'
+        triangle2.className = 'triangle';
+        triangle3.className = 'triangle1'
 
         quyu.style.color = 'black';
         jiage.style.color = 'black';
@@ -292,7 +303,7 @@
         gengduo.style.color = '#ff8a00';
         quyubox.style.display = 'none';
         jiagebox.style.display = 'none';
-        fangxingbox .style.display = 'none';
+        fangxingbox.style.display = 'none';
         morebox.style.display = 'block';
     }
 
@@ -300,21 +311,21 @@
 
 
 
-    mb_.onclick=function(){
+    mb_.onclick = function () {
         quyubox.style.display = 'none';
         jiagebox.style.display = 'none';
-        fangxingbox .style.display = 'none';
+        fangxingbox.style.display = 'none';
         morebox.style.display = 'none';
-        mb_.style.display="none";
+        mb_.style.display = "none";
 
         quyu.style.color = 'black';
-        triangle.className='triangle';
-        
+        triangle.className = 'triangle';
+
 
         jiage.style.color = 'black';
-        triangle_.className='triangle';
-        triangle2.className='triangle';
-        triangle3.className='triangle';
+        triangle_.className = 'triangle';
+        triangle2.className = 'triangle';
+        triangle3.className = 'triangle';
     }
 
 
