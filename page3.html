@@ -19,16 +19,16 @@
         <div class="list">
             <ul>
                 <li>
-                    <a id="quyu">区域</a>
+                    <a id="quyu"  class="triangle">区域</a>
                 </li>
                 <li>
-                    <a id="jiage">价格</a>
+                    <a id="jiage" class="triangle">价格</a>
                 </li>
                 <li>
-                    <a id="fangxing">房型</a>
+                    <a id="fangxing" class="triangle">房型</a>
                 </li>
                 <li>
-                    <a id="gengduo">更多</a>
+                    <a id="gengduo" class="triangle">更多</a>
                 </li>
             </ul>
 
@@ -202,12 +202,16 @@
             <p>网络经营许可证京ICP备20160812号</p>
 
         </div>
-    </footer>           
+    </footer>          
+    
+    <div class="mb">
+
+    </div>
 </body>
 
 </html>
 
-
+<!-- <script src="./js/touch.min.js"></script> -->
 <script>
 
     var quyu = document.getElementById('quyu');
@@ -218,8 +222,23 @@
     var jiagebox = document.getElementsByClassName('jiage-box')[0];
     var fangxingbox = document.getElementsByClassName('fangxing-box')[0];
     var morebox = document.getElementsByClassName('more-box')[0];
+    // var mengban=document.createElement("div");
+    var body_=document.getElementsByClassName("body")[0];
+        // mengban.className="mb";
+    var mb_=document.getElementsByClassName("mb")[0];
+    var triangle=document.getElementsByClassName("triangle")[0];
+    var triangle_=document.getElementsByClassName("triangle")[1];
+    var triangle2=document.getElementsByClassName("triangle")[2];
+    var triangle3=document.getElementsByClassName("triangle")[3];
+    // console.log(triangle);
+    // console.log(mb_);
 
     quyu.onclick = function(){
+         
+           mb_.style.display="block";
+           triangle.className='triangle1';
+
+
         quyu.style.color = '#ff8a00';
         jiage.style.color = 'black';
         fangxing.style.color = 'black';
@@ -229,7 +248,15 @@
         fangxingbox .style.display = 'none';
         morebox.style.display = 'none';
     }
+    
+   
+
     jiage.onclick = function(){
+
+        
+        mb_.style.display="block";
+        triangle_.className='triangle1';
+
         quyu.style.color = 'black';
         jiage.style.color = '#ff8a00';
         fangxing.style.color = 'black';
@@ -240,6 +267,11 @@
         morebox.style.display = 'none';
     }
     fangxing.onclick = function(){
+
+        mb_.style.display="block";
+        triangle2.className='triangle1';
+
+
         quyu.style.color = 'black';
         jiage.style.color = 'black';
         fangxing.style.color = '#ff8a00';
@@ -250,6 +282,10 @@
         morebox.style.display = 'none';
     }
     gengduo.onclick = function(){
+
+        mb_.style.display="block";
+        triangle3.className='triangle1';
+
         quyu.style.color = 'black';
         jiage.style.color = 'black';
         fangxing.style.color = 'black';
@@ -260,6 +296,26 @@
         morebox.style.display = 'block';
     }
 
+
+
+
+
+    mb_.onclick=function(){
+        quyubox.style.display = 'none';
+        jiagebox.style.display = 'none';
+        fangxingbox .style.display = 'none';
+        morebox.style.display = 'none';
+        mb_.style.display="none";
+
+        quyu.style.color = 'black';
+        triangle.className='triangle';
+        
+
+        jiage.style.color = 'black';
+        triangle_.className='triangle';
+        triangle2.className='triangle';
+        triangle3.className='triangle';
+    }
 
 
 

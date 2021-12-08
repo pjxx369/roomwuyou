@@ -301,3 +301,43 @@ footer{
 }
 
 
+.guding{
+    display: flex;
+    width: 100%;
+    height: 6.5rem;
+    position: fixed;
+    bottom: 0;
+}
+.leftbg{
+    display: flex;
+    width: 70%;
+    background-color: rgb(23,24,24,0.5);
+    color: white;
+}
+.guding img{
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-left: 3rem;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+}
+.guanggao{
+    margin-left: 3rem;
+    margin-top: 1rem;
+}
+.guanggao .p1{
+    font-size: 2rem;
+}
+.guanggao .p2{
+    font-size: 1.3rem;
+}
+.guding span{
+    display: inline-block;
+    width: 33%;
+    height: 100%;
+    background-color: #ff8a00;
+    color: white;
+    font-size: 2.1rem;
+    line-height: 6.5rem;
+    text-align: center;
+}
